@@ -33,8 +33,9 @@ type Config struct {
 	// Addresses is an explicit host list; used when Address is not a full URI (overrides host part).
 	Addresses []string
 
-	// Username and Password are embedded in the connection URI when set.
+	// Username is embedded in the connection URI when set.
 	Username string
+	// Password is embedded in the connection URI when set.
 	Password string
 	// Database is the default database name (required).
 	Database string

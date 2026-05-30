@@ -19,7 +19,8 @@ var _ Client = (*Conn)(nil)
 type Conn struct {
 	client *mongo.Client
 	cfg    Config
-	DB     *mongo.Database // prefer Database(); kept for backward compatibility
+	// DB is the default database; prefer Database() for new code.
+	DB *mongo.Database
 }
 
 // Database returns the default database handle.
