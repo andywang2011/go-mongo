@@ -1,6 +1,6 @@
 module github.com/andywang2011/go-mongo
 
-go 1.25
+go 1.27.3
 
 require go.mongodb.org/mongo-driver v1.17.9
 
