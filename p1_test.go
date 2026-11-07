@@ -69,7 +69,8 @@ func TestNew_parentCtxCancelled(t *testing.T) {
 func TestNew_nilCtxTolerated(t *testing.T) {
 	swapSeams(t)
 	connectMongo = func(context.Context, Config) (*mongo.Client, error) { return nil, errors.New("x") }
-	if _, err := New(nil, validTestConfig()); err == nil { //nolint:staticcheck
+	//lint:ignore SA1012 intentional nil context in test
+	if _, err := New(nil, validTestConfig()); err == nil {
 		t.Fatal("expected error")
 	}
 }
