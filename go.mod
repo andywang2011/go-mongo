@@ -3,7 +3,7 @@ module github.com/andywang2011/go-mongo
 go 1.27.4
 
 require (
-	go.mongodb.org/mongo-driver/v2 v2.10.0
+	go.mongodb.org/mongo-driver/v2 v2.10.1
 	go.uber.org/goleak v1.3.0
 )
 
